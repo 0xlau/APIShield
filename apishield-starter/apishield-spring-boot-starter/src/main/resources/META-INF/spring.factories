@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  top.xystudio.apishield.springboot.config.ApiShieldPropertyAutoConfiguration,\
+  top.xystudio.apishield.springboot.config.ApiShieldMainAutoConfiguration,\
+  top.xystudio.apishield.springboot.config.ApiShieldWebMvcConfigurer,\
+  top.xystudio.apishield.springboot.controller.TsServiceController

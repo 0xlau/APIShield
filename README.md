@@ -50,7 +50,7 @@ success
 ## 交流群
 微信交流群：
 
-![微信群](https://s1.ax1x.com/2022/12/16/z7tTFe.png ':size=230')
+<img src="https://s1.ax1x.com/2022/12/20/zLJWjA.md.png" width="255">
 
 (扫码添加微信，备注：apishield，邀您加入群聊)
 

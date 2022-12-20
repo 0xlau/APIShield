@@ -8,8 +8,9 @@ import java.lang.annotation.*;
 /**
  * 时间戳校验注解
  * <p> 可标注在函数、类上（效果等同于标注在此类的所有方法上）
+ *
  * @author liupeiqiang
- * @date 2022/12/15 0:19
+ * @version $Id: $Id
  */
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
@@ -17,12 +18,22 @@ import java.lang.annotation.*;
 @Inherited
 public @interface ApiShieldCheckTimestamp {
 
-    // timestamp 关键词
+    /**
+     * Timestamp 关键词
+     * @return 返回 Timestamp关键词
+     */
     String value() default "";
 
-    // 有效期（单位：毫秒）
+    /**
+     * 有效期（单位：毫秒）
+     * @return 整数型
+     */
     int lifeTime() default 0;
 
+    /**
+     * 实现了 CheckTimestampHandler 的处理器
+     * @return 处理器
+     */
     Class<? extends CheckTimestampHandler> handler() default DefaultCheckTimestampHandler.class;
 
 }

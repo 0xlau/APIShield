@@ -12,8 +12,9 @@ import java.util.Objects;
 
 /**
  * ApiShield 内部工具类
+ *
  * @author liupeiqiang
- * @date 2022/12/10 22:26
+ * @version $Id: $Id
  */
 public class ApiShieldUtil {
 
@@ -37,6 +38,7 @@ public class ApiShieldUtil {
 
     /**
      * 指定元素是否为null或者空字符串
+     *
      * @param str 指定元素
      * @return 是否为null或者空字符串
      */
@@ -46,6 +48,7 @@ public class ApiShieldUtil {
 
     /**
      * 指定元素是否不为 (null或者空字符串)
+     *
      * @param str 指定元素
      * @return 是否为null或者空字符串
      */
@@ -55,6 +58,7 @@ public class ApiShieldUtil {
 
     /**
      * 指定数组是否为null或者空数组
+     *
      * @param <T> /
      * @param array /
      * @return /
@@ -65,6 +69,7 @@ public class ApiShieldUtil {
 
     /**
      * 比较两个对象是否相等
+     *
      * @param a 第一个对象
      * @param b 第二个对象
      * @return 两个对象是否相等
@@ -75,8 +80,9 @@ public class ApiShieldUtil {
 
     /**
      * md5加密算法
-     * @param plantText
-     * @return
+     *
+     * @param plantText a {@link java.lang.String} object.
+     * @return a {@link java.lang.String} object.
      */
     public static String md5(String plantText){
         // 加密后的16进制字符串
@@ -93,6 +99,12 @@ public class ApiShieldUtil {
         return hexStr;
     }
 
+    /**
+     * <p>splitQueryString.</p>
+     *
+     * @param queryString a {@link java.lang.String} object.
+     * @return a {@link java.util.Map} object.
+     */
     public static Map splitQueryString(String queryString) {
         Map queryPairs = new LinkedHashMap();
         if (ApiShieldUtil.isEmpty(queryString)){
@@ -111,6 +123,11 @@ public class ApiShieldUtil {
         return queryPairs;
     }
 
+    /**
+     * <p>getTimeStamp.</p>
+     *
+     * @return a {@link java.lang.Long} object.
+     */
     public static Long getTimeStamp(){
         return System.currentTimeMillis();
     }

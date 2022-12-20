@@ -1,8 +1,10 @@
 package top.xystudio.apishield.exception;
 
 /**
+ * <p>NoSupportContentTypeException class.</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/8 16:00
+ * @version $Id: $Id
  */
 public class NoSupportContentTypeException extends ApiShieldException {
     /**
@@ -14,6 +16,9 @@ public class NoSupportContentTypeException extends ApiShieldException {
         super(message);
     }
 
+    /**
+     * <p>Constructor for NoSupportContentTypeException.</p>
+     */
     public NoSupportContentTypeException() {
         super("不支持的Content-Type");
     }

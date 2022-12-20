@@ -7,8 +7,9 @@ import top.xystudio.apishield.utils.ApiShieldUtil;
 
 /**
  * 摘要签名处理抽象类
+ *
  * @author liupeiqiang
- * @date 2022/12/13 9:39
+ * @version $Id: $Id
  */
 public abstract class DigestSignatureHandler extends SignatureHandler implements IDigestSignature{
 
@@ -16,6 +17,7 @@ public abstract class DigestSignatureHandler extends SignatureHandler implements
         return ApiShieldManager.getApiShieldContext().getRequest();
     }
 
+    /** {@inheritDoc} */
     @Override
     public void check(){
         // 获取 sign 值

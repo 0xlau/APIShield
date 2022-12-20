@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 
 /**
  * @author liupeiqiang
- * @date 2022/12/8 18:53
  */
 @RestController
 @RequestMapping("/hotel")

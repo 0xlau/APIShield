@@ -8,7 +8,6 @@ import java.util.Map;
 /**
  * Request 包装类
  * @author liupeiqiang
- * @date 2022/12/10 17:32
  */
 public interface ApiShieldRequest {
 
@@ -31,21 +30,21 @@ public interface ApiShieldRequest {
     public String getBody();
 
     /**
-     * 在 [请求体] 里获取一个值
+     * 在请求体里获取一个值
      * @param name 键
      * @return 值
      */
     public String getParam(String name);
 
     /**
-     * 获取整个 [请求体] 并用Map<String, String[]>返回
+     * 获取整个请求体并用Map返回
      *
      * @return 值
      */
     public Map<String, String[]> getParamMap();
 
     /**
-     * 在 [请求体] 里获取一个值，值为空时返回默认值
+     * 在请求体里获取一个值，值为空时返回默认值
      * @param name 键
      * @param defaultValue 值为空时的默认值
      * @return 值
@@ -79,7 +78,7 @@ public interface ApiShieldRequest {
     }
 
     /**
-     * 在 [请求体] 里获取一个值 （此值必须存在，否则抛出异常 ）
+     * 在请求体里获取一个值 （此值必须存在，否则抛出异常 ）
      * @param name 键
      * @return 参数值
      */

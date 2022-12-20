@@ -9,14 +9,20 @@ import top.xystudio.apishield.utils.ApiShieldUtil;
 
 /**
  * 时间戳服务 Controller
+ *
  * @author liupeiqiang
- * @date 2022/12/15 12:02
+ * @version $Id: $Id
  */
 @RestController
 @RequestMapping("/apishield-service/timestamp")
 @ConditionalOnProperty(prefix = "apishield", name = "ts-service-enable", havingValue = "true")
 public class TsServiceController {
 
+    /**
+     * <p>getTimeStamp.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     @GetMapping
     public String getTimeStamp(){
         return ApiShieldUtil.getTimeStamp().toString();

@@ -4,14 +4,17 @@ import top.xystudio.apishield.context.model.ApiShieldRequest;
 
 /**
  * 时间戳接口
+ *
  * @author liupeiqiang
- * @date 2022/12/15 11:35
+ * @version $Id: $Id
  */
 public interface ITimestamp {
 
     /**
      * 取时间戳值
-     * @return
+     *
+     * @param request a {@link top.xystudio.apishield.context.model.ApiShieldRequest} object.
+     * @return a {@link java.lang.Long} object.
      */
     public Long getSourceTimestampValue(ApiShieldRequest request);
 

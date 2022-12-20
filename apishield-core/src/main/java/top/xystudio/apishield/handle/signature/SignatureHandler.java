@@ -6,8 +6,10 @@ import top.xystudio.apishield.context.model.ApiShieldRequest;
 import top.xystudio.apishield.handle.ICheck;
 
 /**
+ * <p>Abstract SignatureHandler class.</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/14 23:04
+ * @version $Id: $Id
  */
 public abstract class SignatureHandler implements ISignature, ICheck {
 
@@ -17,16 +19,29 @@ public abstract class SignatureHandler implements ISignature, ICheck {
     /** sign 盐 **/
     protected String signSalt;
 
+    /**
+     * <p>Setter for the field <code>signName</code>.</p>
+     *
+     * @param signName a {@link java.lang.String} object.
+     * @return a {@link top.xystudio.apishield.handle.signature.SignatureHandler} object.
+     */
     public SignatureHandler setSignName(String signName) {
         this.signName = signName;
         return this;
     }
 
+    /**
+     * <p>Setter for the field <code>signSalt</code>.</p>
+     *
+     * @param signSalt a {@link java.lang.String} object.
+     * @return a {@link top.xystudio.apishield.handle.signature.SignatureHandler} object.
+     */
     public SignatureHandler setSignSalt(String signSalt) {
         this.signSalt = signSalt;
         return this;
     }
 
+    /** {@inheritDoc} */
     @Override
     public String getSourceSignValue(ApiShieldRequest request) {
         ApiShieldConfig config = ApiShieldManager.getConfig();

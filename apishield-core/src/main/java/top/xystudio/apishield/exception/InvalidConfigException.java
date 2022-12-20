@@ -1,10 +1,17 @@
 package top.xystudio.apishield.exception;
 
 /**
+ * <p>InvalidConfigException class.</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/11 23:31
+ * @version $Id: $Id
  */
 public class InvalidConfigException extends ApiShieldException {
+    /**
+     * <p>Constructor for InvalidConfigException.</p>
+     *
+     * @param message a {@link java.lang.String} object.
+     */
     public InvalidConfigException(String message) {
         super(message);
     }

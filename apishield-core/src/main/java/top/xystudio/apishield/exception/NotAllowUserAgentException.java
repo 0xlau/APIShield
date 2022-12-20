@@ -1,11 +1,14 @@
 package top.xystudio.apishield.exception;
 
 /**
+ * <p>NotAllowUserAgentException class.</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/12 16:33
+ * @version $Id: $Id
  */
 public class NotAllowUserAgentException extends ApiShieldException{
 
+    /** Constant <code>BE_MESSAGE="User-Agent不合法，拒绝访问"</code> */
     public static final String BE_MESSAGE = "User-Agent不合法，拒绝访问";
     /**
      * 构建一个异常
@@ -16,6 +19,9 @@ public class NotAllowUserAgentException extends ApiShieldException{
         super(message);
     }
 
+    /**
+     * <p>Constructor for NotAllowUserAgentException.</p>
+     */
     public NotAllowUserAgentException(){
         super(BE_MESSAGE);
     }

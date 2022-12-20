@@ -9,11 +9,12 @@ import java.util.TreeMap;
 
 /**
  * 默认摘要签名处理器，实现 DigestSignatureHandler
- * 序列化规则：将请求参数的key升序排列，并序列化为 key1:value1&key2:value2&...形式
- * 加盐规则：在文本后面加入固定盐
- * 摘要规则：MD5算法
+ * <p>序列化规则：将请求参数的key升序排列，并序列化为 key1:value1&amp;key2:value2&amp;...形式</p>
+ * <p>加盐规则：在文本后面加入固定盐</p>
+ * <p>摘要规则：MD5算法</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/13 9:58
+ * @version $Id: $Id
  */
 public class DefaultDigestSignatureHandler extends DigestSignatureHandler {
 
@@ -31,6 +32,7 @@ public class DefaultDigestSignatureHandler extends DigestSignatureHandler {
         return result.toString();
     }
 
+    /** {@inheritDoc} */
     @Override
     public String serialize(ApiShieldRequest request) {
         if (request.getMethod().equalsIgnoreCase("get")){
@@ -46,6 +48,7 @@ public class DefaultDigestSignatureHandler extends DigestSignatureHandler {
         throw new NoSupportMethodException("暂不支持 " + request.getMethod() + " 方法，请自行实现 DigestSignatureHandler");
     }
 
+    /** {@inheritDoc} */
     @Override
     public String salt(String serializedStr) {
         if (ApiShieldUtil.isEmpty(this.signSalt)){
@@ -54,6 +57,7 @@ public class DefaultDigestSignatureHandler extends DigestSignatureHandler {
         return serializedStr + this.signSalt;
     }
 
+    /** {@inheritDoc} */
     @Override
     public String encrypt(String plainText) {
         return ApiShieldUtil.md5(plainText);

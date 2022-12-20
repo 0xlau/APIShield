@@ -1,8 +1,10 @@
 package top.xystudio.apishield.exception;
 
 /**
+ * <p>InvalidContextException class.</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/11 23:23
+ * @version $Id: $Id
  */
 public class InvalidContextException extends ApiShieldException {
     /**

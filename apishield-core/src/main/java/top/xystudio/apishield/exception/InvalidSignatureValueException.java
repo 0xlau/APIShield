@@ -1,8 +1,10 @@
 package top.xystudio.apishield.exception;
 
 /**
+ * <p>InvalidSignatureValueException class.</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/8 18:33
+ * @version $Id: $Id
  */
 public class InvalidSignatureValueException extends ApiShieldException {
 
@@ -15,6 +17,9 @@ public class InvalidSignatureValueException extends ApiShieldException {
         super(message);
     }
 
+    /**
+     * <p>Constructor for InvalidSignatureValueException.</p>
+     */
     public InvalidSignatureValueException(){
         super("无效的sign签名");
     }

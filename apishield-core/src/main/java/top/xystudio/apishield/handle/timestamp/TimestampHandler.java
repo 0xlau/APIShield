@@ -6,9 +6,10 @@ import top.xystudio.apishield.context.model.ApiShieldRequest;
 import top.xystudio.apishield.handle.ICheck;
 
 /**
+ * <p>Abstract TimestampHandler class.</p>
  *
  * @author liupeiqiang
- * @date 2022/12/15 11:36
+ * @version $Id: $Id
  */
 public abstract class TimestampHandler implements ITimestamp, ICheck {
 
@@ -18,16 +19,29 @@ public abstract class TimestampHandler implements ITimestamp, ICheck {
     /** 存活时间 **/
     protected Integer lifeTime;
 
+    /**
+     * <p>Setter for the field <code>tsName</code>.</p>
+     *
+     * @param tsName a {@link java.lang.String} object.
+     * @return a {@link top.xystudio.apishield.handle.timestamp.TimestampHandler} object.
+     */
     public TimestampHandler setTsName(String tsName) {
         this.tsName = tsName;
         return this;
     }
 
+    /**
+     * <p>Setter for the field <code>lifeTime</code>.</p>
+     *
+     * @param lifeTime a {@link java.lang.Integer} object.
+     * @return a {@link top.xystudio.apishield.handle.timestamp.TimestampHandler} object.
+     */
     public TimestampHandler setLifeTime(Integer lifeTime) {
         this.lifeTime = lifeTime;
         return this;
     }
 
+    /** {@inheritDoc} */
     @Override
     public Long getSourceTimestampValue(ApiShieldRequest request) {
         ApiShieldConfig config = ApiShieldManager.getConfig();

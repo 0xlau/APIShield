@@ -1,5 +1,11 @@
 package top.xystudio.apishield.exception;
 
+/**
+ * <p>ApiShieldException class.</p>
+ *
+ * @author lpq33
+ * @version $Id: $Id
+ */
 public class ApiShieldException extends RuntimeException{
 
 

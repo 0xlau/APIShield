@@ -11,8 +11,10 @@ import java.io.InputStreamReader;
 import java.util.Map;
 
 /**
+ * <p>ApiShieldRequestForServlet class.</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/12 15:09
+ * @version $Id: $Id
  */
 public class ApiShieldRequestForServlet implements ApiShieldRequest {
 
@@ -23,22 +25,26 @@ public class ApiShieldRequestForServlet implements ApiShieldRequest {
 
     /**
      * 实例化
+     *
      * @param request request对象
      */
     public ApiShieldRequestForServlet(HttpServletRequest request) {
         this.request = request;
     }
 
+    /** {@inheritDoc} */
     @Override
     public Object getSource() {
         return request;
     }
 
+    /** {@inheritDoc} */
     @Override
     public String getQueryString() {
         return request.getQueryString();
     }
 
+    /** {@inheritDoc} */
     @Override
     public String getBody() {
         try{
@@ -54,21 +60,25 @@ public class ApiShieldRequestForServlet implements ApiShieldRequest {
         }
     }
 
+    /** {@inheritDoc} */
     @Override
     public Map<String, String[]> getParamMap() {
         return request.getParameterMap();
     }
 
+    /** {@inheritDoc} */
     @Override
     public String getParam(String name) {
         return request.getParameter(name);
     }
 
+    /** {@inheritDoc} */
     @Override
     public String getHeader(String name) {
         return request.getHeader(name);
     }
 
+    /** {@inheritDoc} */
     @Override
     public String getCookieValue(String name) {
         Cookie[] cookies = request.getCookies();
@@ -82,16 +92,19 @@ public class ApiShieldRequestForServlet implements ApiShieldRequest {
         return null;
     }
 
+    /** {@inheritDoc} */
     @Override
     public String getRequestPath() {
         return request.getServletPath();
     }
 
+    /** {@inheritDoc} */
     @Override
     public String getUrl() {
         return request.getRequestURL().toString();
     }
 
+    /** {@inheritDoc} */
     @Override
     public String getMethod() {
         return request.getMethod();

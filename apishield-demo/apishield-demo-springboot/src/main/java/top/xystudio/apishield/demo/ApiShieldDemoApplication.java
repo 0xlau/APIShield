@@ -7,7 +7,6 @@ import top.xystudio.apishield.ApiShieldManager;
 /**
  * ApiShield 整合SpringBoot 示例
  * @author liupeiqiang
- * @date 2022/12/8 18:45
  */
 @SpringBootApplication
 public class ApiShieldDemoApplication {

@@ -12,11 +12,13 @@ import java.util.Map;
 
 /**
  * ApiShield 综合拦截器
+ *
  * @author liupeiqiang
- * @date 2022/12/7 17:45
+ * @version $Id: $Id
  */
 public class ApiShieldInterceptor implements HandlerInterceptor {
 
+    /** {@inheritDoc} */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 

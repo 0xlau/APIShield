@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * <p>SpringMVCUtil class.</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/7 18:30
+ * @version $Id: $Id
  */
 public class SpringMVCUtil {
 
@@ -18,6 +20,7 @@ public class SpringMVCUtil {
 
     /**
      * 获取当前会话的 request
+     *
      * @return request
      */
     public static HttpServletRequest getRequest() {
@@ -30,6 +33,7 @@ public class SpringMVCUtil {
 
     /**
      * 获取当前会话的 response
+     *
      * @return response
      */
     public static HttpServletResponse getResponse() {
@@ -42,6 +46,7 @@ public class SpringMVCUtil {
 
     /**
      * 判断当前是否处于 Web 上下文中
+     *
      * @return request
      */
     public static boolean isWeb() {

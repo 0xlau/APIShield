@@ -1,8 +1,10 @@
 package top.xystudio.apishield.consts;
 
 /**
+ * <p>ApiShieldConsts class.</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/10 22:30
+ * @version $Id: $Id
  */
 public class ApiShieldConsts {
 

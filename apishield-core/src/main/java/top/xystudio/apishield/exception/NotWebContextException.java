@@ -1,10 +1,17 @@
 package top.xystudio.apishield.exception;
 
 /**
+ * <p>NotWebContextException class.</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/7 18:31
+ * @version $Id: $Id
  */
 public class NotWebContextException extends ApiShieldException {
+    /**
+     * <p>Constructor for NotWebContextException.</p>
+     *
+     * @param message a {@link java.lang.String} object.
+     */
     public NotWebContextException(String message) {
         super(message);
     }

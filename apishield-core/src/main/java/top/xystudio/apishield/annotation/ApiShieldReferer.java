@@ -5,8 +5,9 @@ import java.lang.annotation.*;
 /**
  * 校验Referer注解
  * <p> 可标注在函数、类上（效果等同于标注在此类的所有方法上）
+ *
  * @author liupeiqiang
- * @date 2022/12/12 15:40
+ * @version $Id: $Id
  */
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)

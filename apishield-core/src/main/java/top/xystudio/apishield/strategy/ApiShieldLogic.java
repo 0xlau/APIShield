@@ -17,8 +17,9 @@ import java.util.regex.Pattern;
 
 /**
  * ApiShield逻辑实现类
+ *
  * @author liupeiqiang
- * @date 2022/12/12 16:13
+ * @version $Id: $Id
  */
 public class ApiShieldLogic {
 
@@ -33,6 +34,7 @@ public class ApiShieldLogic {
     // ------------------- 注解验证 -------------------
     /**
      * 根据注解(@ApiShieldReferer)验证
+     *
      * @param asr 注解对象
      */
     public void checkByAnnotation(ApiShieldReferer asr) {
@@ -58,6 +60,7 @@ public class ApiShieldLogic {
 
     /**
      * 根据注解(@ApiShieldUserAgent)验证
+     *
      * @param asua 注解对象
      */
     public void checkByAnnotation(ApiShieldUserAgent asua) {
@@ -83,6 +86,7 @@ public class ApiShieldLogic {
 
     /**
      * 根据注解(@ApiShieldDigestSignature)验证
+     *
      * @param asds 注解对象
      */
     public void checkByAnnotation(ApiShieldDigestSignature asds) {
@@ -105,6 +109,7 @@ public class ApiShieldLogic {
 
     /**
      * 根据注解(@ApiShieldCheckTimestamp)验证
+     *
      * @param asct 注解对象
      */
     public void checkByAnnotation(ApiShieldCheckTimestamp asct) {

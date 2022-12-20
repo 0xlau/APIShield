@@ -7,8 +7,9 @@ import top.xystudio.apishield.utils.ApiShieldUtil;
 
 /**
  * 默认时间戳校验抽象类
+ *
  * @author liupeiqiang
- * @date 2022/12/15 11:44
+ * @version $Id: $Id
  */
 public abstract class CheckTimestampHandler extends TimestampHandler {
 
@@ -16,6 +17,7 @@ public abstract class CheckTimestampHandler extends TimestampHandler {
         return ApiShieldManager.getApiShieldContext().getRequest();
     }
 
+    /** {@inheritDoc} */
     @Override
     public void check() {
         // 获取 timestamp 值

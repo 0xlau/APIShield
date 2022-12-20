@@ -7,8 +7,9 @@ import top.xystudio.apishield.strategy.ApiShieldLogic;
 
 /**
  * 管理 ApiShield 所有全部组件
+ *
  * @author liupeiqiang
- * @date 2022/12/11 23:24
+ * @version $Id: $Id
  */
 public class ApiShieldManager {
 
@@ -16,6 +17,12 @@ public class ApiShieldManager {
      * 逻辑处理 Bean
      */
     private static final ApiShieldLogic apiShieldLogic = new ApiShieldLogic();
+
+    /**
+     * <p>Getter for the field <code>apiShieldLogic</code>.</p>
+     *
+     * @return a {@link top.xystudio.apishield.strategy.ApiShieldLogic} object.
+     */
     public static final ApiShieldLogic getApiShieldLogic(){
         return apiShieldLogic;
     }
@@ -25,10 +32,20 @@ public class ApiShieldManager {
      */
     public volatile static ApiShieldConfig config;
 
+    /**
+     * <p>Setter for the field <code>config</code>.</p>
+     *
+     * @param config a {@link top.xystudio.apishield.config.ApiShieldConfig} object.
+     */
     public static void setConfig(ApiShieldConfig config){
         ApiShieldManager.config = config;
     }
 
+    /**
+     * <p>Getter for the field <code>config</code>.</p>
+     *
+     * @return a {@link top.xystudio.apishield.config.ApiShieldConfig} object.
+     */
     public static ApiShieldConfig getConfig() {
         if (config == null) {
             synchronized (ApiShieldManager.class) {
@@ -44,9 +61,19 @@ public class ApiShieldManager {
      * 上下文Context Bean
      */
     private volatile static ApiShieldContext apiShieldContext;
+    /**
+     * <p>Setter for the field <code>apiShieldContext</code>.</p>
+     *
+     * @param apiShieldContext a {@link top.xystudio.apishield.context.ApiShieldContext} object.
+     */
     public static void setApiShieldContext(ApiShieldContext apiShieldContext) {
         ApiShieldManager.apiShieldContext = apiShieldContext;
     }
+    /**
+     * <p>Getter for the field <code>apiShieldContext</code>.</p>
+     *
+     * @return a {@link top.xystudio.apishield.context.ApiShieldContext} object.
+     */
     public static ApiShieldContext getApiShieldContext() {
         return apiShieldContext;
     }

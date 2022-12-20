@@ -7,17 +7,21 @@ import top.xystudio.apishield.utils.SpringMVCUtil;
 
 /**
  * 上下文处理器 [ SpringMVC版本实现 ]
+ *
  * @author liupeiqiang
- * @date 2022/12/12 15:19
+ * @version $Id: $Id
  */
 public class ApiShieldContextForSpring implements ApiShieldContext {
 
+    /** {@inheritDoc} */
     @Override
     public ApiShieldRequest getRequest() {
         return new ApiShieldRequestForServlet(SpringMVCUtil.getRequest());
     }
 
     /**
+     * {@inheritDoc}
+     *
      * 此上下文是否有效
      */
     @Override

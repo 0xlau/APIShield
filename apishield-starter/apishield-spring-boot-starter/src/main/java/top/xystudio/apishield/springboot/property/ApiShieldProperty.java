@@ -4,8 +4,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * 基础参数类
+ *
  * @author liupeiqiang
- * @date 2022/12/7 17:37
+ * @version $Id: $Id
  */
 @ConfigurationProperties(prefix = "apishield")
 public class ApiShieldProperty {
@@ -40,82 +41,182 @@ public class ApiShieldProperty {
     /** 是否尝试从query里读取关键词 */
     private Boolean isReadQuery = true;
 
+    /**
+     * <p>Getter for the field <code>tsServiceEnable</code>.</p>
+     *
+     * @return a {@link java.lang.Boolean} object.
+     */
     public Boolean getTsServiceEnable() {
         return tsServiceEnable;
     }
 
+    /**
+     * <p>Setter for the field <code>tsServiceEnable</code>.</p>
+     *
+     * @param tsServiceEnable a {@link java.lang.Boolean} object.
+     */
     public void setTsServiceEnable(Boolean tsServiceEnable) {
         this.tsServiceEnable = tsServiceEnable;
     }
 
+    /**
+     * <p>Getter for the field <code>tsName</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getTsName() {
         return tsName;
     }
 
+    /**
+     * <p>Setter for the field <code>tsName</code>.</p>
+     *
+     * @param tsName a {@link java.lang.String} object.
+     */
     public void setTsName(String tsName) {
         this.tsName = tsName;
     }
 
+    /**
+     * <p>Getter for the field <code>tsLifetime</code>.</p>
+     *
+     * @return a {@link java.lang.Integer} object.
+     */
     public Integer getTsLifetime() {
         return tsLifetime;
     }
 
+    /**
+     * <p>Setter for the field <code>tsLifetime</code>.</p>
+     *
+     * @param tsLifetime a {@link java.lang.Integer} object.
+     */
     public void setTsLifetime(Integer tsLifetime) {
         this.tsLifetime = tsLifetime;
     }
 
+    /**
+     * <p>Getter for the field <code>enable</code>.</p>
+     *
+     * @return a {@link java.lang.Boolean} object.
+     */
     public Boolean getEnable() {
         return enable;
     }
 
+    /**
+     * <p>Setter for the field <code>enable</code>.</p>
+     *
+     * @param enable a {@link java.lang.Boolean} object.
+     */
     public void setEnable(Boolean enable) {
         this.enable = enable;
     }
 
+    /**
+     * <p>Getter for the field <code>isReadBody</code>.</p>
+     *
+     * @return a {@link java.lang.Boolean} object.
+     */
     public Boolean getIsReadBody() {
         return isReadBody;
     }
 
+    /**
+     * <p>Setter for the field <code>isReadBody</code>.</p>
+     *
+     * @param readBody a {@link java.lang.Boolean} object.
+     */
     public void setIsReadBody(Boolean readBody) {
         isReadBody = readBody;
     }
 
+    /**
+     * <p>Getter for the field <code>isReadHeader</code>.</p>
+     *
+     * @return a {@link java.lang.Boolean} object.
+     */
     public Boolean getIsReadHeader() {
         return isReadHeader;
     }
 
+    /**
+     * <p>Setter for the field <code>isReadHeader</code>.</p>
+     *
+     * @param readHeader a {@link java.lang.Boolean} object.
+     */
     public void setIsReadHeader(Boolean readHeader) {
         isReadHeader = readHeader;
     }
 
+    /**
+     * <p>Getter for the field <code>isReadCookie</code>.</p>
+     *
+     * @return a {@link java.lang.Boolean} object.
+     */
     public Boolean getIsReadCookie() {
         return isReadCookie;
     }
 
+    /**
+     * <p>Setter for the field <code>isReadCookie</code>.</p>
+     *
+     * @param readCookie a {@link java.lang.Boolean} object.
+     */
     public void setIsReadCookie(Boolean readCookie) {
         isReadCookie = readCookie;
     }
 
+    /**
+     * <p>Getter for the field <code>isReadQuery</code>.</p>
+     *
+     * @return a {@link java.lang.Boolean} object.
+     */
     public Boolean getIsReadQuery() {
         return isReadQuery;
     }
 
+    /**
+     * <p>Setter for the field <code>isReadQuery</code>.</p>
+     *
+     * @param readQuery a {@link java.lang.Boolean} object.
+     */
     public void setIsReadQuery(Boolean readQuery) {
         isReadQuery = readQuery;
     }
 
+    /**
+     * <p>Getter for the field <code>signName</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getSignName() {
         return signName;
     }
 
+    /**
+     * <p>Setter for the field <code>signName</code>.</p>
+     *
+     * @param signName a {@link java.lang.String} object.
+     */
     public void setSignName(String signName) {
         this.signName = signName;
     }
 
+    /**
+     * <p>Getter for the field <code>signSalt</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getSignSalt() {
         return signSalt;
     }
 
+    /**
+     * <p>Setter for the field <code>signSalt</code>.</p>
+     *
+     * @param signSalt a {@link java.lang.String} object.
+     */
     public void setSignSalt(String signSalt) {
         this.signSalt = signSalt;
     }

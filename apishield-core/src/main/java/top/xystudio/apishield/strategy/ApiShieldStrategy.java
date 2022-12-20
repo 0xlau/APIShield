@@ -12,17 +12,24 @@ import java.lang.reflect.Method;
 /**
  * ApiShield 策略对象
  * ApiShieldStrategy 全局单例
+ *
  * @author liupeiqiang
- * @date 2022/12/12 15:56
+ * @version $Id: $Id
  */
 public final class ApiShieldStrategy {
 
     private ApiShieldStrategy() {
     }
 
+    /** Constant <code>me</code> */
     public static final ApiShieldStrategy me = new ApiShieldStrategy();
 
 
+    /**
+     * <p>checkMethodAnnotation.</p>
+     *
+     * @param method a {@link java.lang.reflect.Method} object.
+     */
     public void checkMethodAnnotation(Method method) {
 
         // 先校验 Method 所属 Class 上的注解

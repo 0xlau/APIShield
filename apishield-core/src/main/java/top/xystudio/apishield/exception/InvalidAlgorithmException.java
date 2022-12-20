@@ -1,8 +1,10 @@
 package top.xystudio.apishield.exception;
 
 /**
+ * <p>InvalidAlgorithmException class.</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/13 15:48
+ * @version $Id: $Id
  */
 public class InvalidAlgorithmException extends ApiShieldException {
     /**
@@ -14,6 +16,9 @@ public class InvalidAlgorithmException extends ApiShieldException {
         super(message);
     }
 
+    /**
+     * <p>Constructor for InvalidAlgorithmException.</p>
+     */
     public InvalidAlgorithmException() {
         super("无效的算法");
     }

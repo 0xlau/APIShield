@@ -11,14 +11,21 @@ import top.xystudio.apishield.utils.ApiShieldUtil;
 
 /**
  * 主要业务装配器
+ *
  * @author liupeiqiang
- * @date 2022/12/8 16:59
+ * @version $Id: $Id
  */
 @Configuration
 @AutoConfigureAfter(ApiShieldPropertyAutoConfiguration.class)
 @ConditionalOnProperty(prefix = "apishield", name = "enable", havingValue = "true")
 public class ApiShieldMainAutoConfiguration {
 
+    /**
+     * <p>Constructor for ApiShieldMainAutoConfiguration.</p>
+     *
+     * @param apiShieldConfig a {@link top.xystudio.apishield.config.ApiShieldConfig} object.
+     * @param apiShieldContext a {@link top.xystudio.apishield.context.ApiShieldContext} object.
+     */
     public ApiShieldMainAutoConfiguration(
             @Autowired ApiShieldConfig apiShieldConfig,
             @Autowired ApiShieldContext apiShieldContext

@@ -1,8 +1,10 @@
 package top.xystudio.apishield.exception;
 
 /**
+ * <p>InvalidSecretKeyException class.</p>
+ *
  * @author liupeiqiang
- * @date 2022/12/13 15:23
+ * @version $Id: $Id
  */
 public class InvalidSecretKeyException extends ApiShieldException {
     /**
@@ -14,6 +16,9 @@ public class InvalidSecretKeyException extends ApiShieldException {
         super(message);
     }
 
+    /**
+     * <p>Constructor for InvalidSecretKeyException.</p>
+     */
     public InvalidSecretKeyException() {
         super("请设置SecretKey");
     }

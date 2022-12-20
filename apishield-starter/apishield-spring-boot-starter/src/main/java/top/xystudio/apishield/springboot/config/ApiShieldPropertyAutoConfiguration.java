@@ -14,8 +14,9 @@ import top.xystudio.apishield.springboot.property.ApiShieldProperty;
  * ApiShieldConfig的装配类
  * 这个装配类主要是把监控器的配置参数类和流程配置参数类作一个合并，转换成统一的配置参数类。
  * 同时这里设置了默认的参数路径，如果在springboot的application.properties/yml里没取到的话，就取默认值
+ *
  * @author liupeiqiang
- * @create 2022/12/7 17:36
+ * @version $Id: $Id
  */
 @Configuration
 @EnableConfigurationProperties({ApiShieldProperty.class})
@@ -25,6 +26,12 @@ import top.xystudio.apishield.springboot.property.ApiShieldProperty;
         value = "classpath:/META-INF/apishield-default.properties")
 public class ApiShieldPropertyAutoConfiguration {
 
+    /**
+     * <p>apiShieldConfig.</p>
+     *
+     * @param apiShieldProperty a {@link top.xystudio.apishield.springboot.property.ApiShieldProperty} object.
+     * @return a {@link top.xystudio.apishield.config.ApiShieldConfig} object.
+     */
     @Bean
     public ApiShieldConfig apiShieldConfig(ApiShieldProperty apiShieldProperty){
         ApiShieldConfig config = new ApiShieldConfig();
@@ -41,6 +48,11 @@ public class ApiShieldPropertyAutoConfiguration {
         return config;
     }
 
+    /**
+     * <p>apiShieldContext.</p>
+     *
+     * @return a {@link top.xystudio.apishield.context.ApiShieldContext} object.
+     */
     @Bean
     public ApiShieldContext apiShieldContext(){
         return new ApiShieldContextForSpring();

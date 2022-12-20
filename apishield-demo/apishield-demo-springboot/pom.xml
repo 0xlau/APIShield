@@ -16,7 +16,7 @@
         <relativePath/>
     </parent>
 
-    <!-- 定义 Sa-Token 版本号 -->
+    <!-- 定义版本号 -->
     <properties>
         <apishield.version>0.0.1-beta.1</apishield.version>
     </properties>
